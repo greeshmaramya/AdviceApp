@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+ >
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginStart="24dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:layout_marginStart="24dp"
+    android:fontFamily="cursive"
+    android:text="@string/title"
+    android:textColor="@color/black"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/advice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:fontFamily="cursive"
+    android:textColor="@color/black"
+    android:textSize="32sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/title"
+    app:layout_constraintVertical_bias="0.2" />
+
+  <Button
+    android:id="@+id/oneMore"
+    style="@style/Widget.AppCompat.Button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="60dp"
+    android:layout_marginStart="24dp"
+    android:text="@string/give_me_one_more"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintStart_toStartOf="parent"
+    />
+
+  <Button
+    android:id="@+id/save"
+    style="@style/Widget.AppCompat.Button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="60dp"
+    android:text="@string/save_this"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.6"
+    app:layout_constraintStart_toStartOf="parent"
+    />
+
+  <Button
+    android:id="@+id/saved_list"
+    style="@style/Widget.AppCompat.Button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="60dp"
+    android:layout_marginEnd="24dp"
+    android:text="@string/saved"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1"
+    app:layout_constraintStart_toStartOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

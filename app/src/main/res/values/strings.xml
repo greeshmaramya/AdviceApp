@@ -1,0 +1,9 @@
+<resources>
+  <string name="app_name">Advice</string>
+  <string name="loading">Loading.....</string>
+  <string name="error">Uh Oh something\'s wrong!</string>
+  <string name="title">Here\'s a slip of advice for you :)</string>
+  <string name="give_me_one_more">Give me one more!</string>
+  <string name="save_this">Save</string>
+  <string name="saved">Saved List</string>
+</resources>
