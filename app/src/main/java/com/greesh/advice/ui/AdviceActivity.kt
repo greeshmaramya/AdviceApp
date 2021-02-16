@@ -54,9 +54,22 @@ class AdviceActivity : AppCompatActivity() {
 
   private fun showAdviceState(state: AdviceState) {
     when (state) {
-      is AdviceState.Loading -> binding.advice.text = getString(R.string.loading)
-      is AdviceState.Error -> binding.advice.text = getString(R.string.error)
+      is AdviceState.Loading -> {
+        binding.advice.isVisible = true
+        binding.title.isVisible = true
+        binding.recyclerView.isVisible = false
+        binding.advice.text = getString(R.string.loading)
+      }
+      is AdviceState.Error -> {
+        binding.advice.isVisible = true
+        binding.title.isVisible = true
+        binding.recyclerView.isVisible = false
+        binding.advice.text = getString(R.string.error)
+      }
       is AdviceState.Advice -> {
+        binding.advice.isVisible = true
+        binding.title.isVisible = true
+        binding.recyclerView.isVisible = false
         binding.advice.text = state.advice.slip.advice
         advice = state.advice
       }
