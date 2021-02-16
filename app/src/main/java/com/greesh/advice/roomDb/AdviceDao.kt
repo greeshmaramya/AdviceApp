@@ -20,5 +20,5 @@ interface AdviceDao {
   fun insert(vararg advice: AdviceEntity): Completable
 
   @Delete
-  fun delete(adviceEntity: AdviceEntity )
+  fun delete(adviceEntity: AdviceEntity)
 }
