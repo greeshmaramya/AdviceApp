@@ -2,13 +2,12 @@ package com.greesh.advice.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.greesh.advice.AdviceState
 import com.greesh.advice.AdviceViewModel
 import com.greesh.advice.R
-import com.greesh.advice.ViewModelFactory
 import com.greesh.advice.api.model.AdviceModel
 import com.greesh.advice.databinding.ActivityAdviceBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,12 +18,11 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class AdviceActivity : AppCompatActivity() {
 
-  @Inject
-  lateinit var viewModelFactory: ViewModelFactory
+  private val viewModel: AdviceViewModel by viewModels()
 
   private var adapter = AdviceAdapter()
 
-  private lateinit var viewModel: AdviceViewModel
+  //private lateinit var viewModel: AdviceViewModel
 
   private lateinit var binding: ActivityAdviceBinding
   private val compositeDisposable = CompositeDisposable()
@@ -34,8 +32,6 @@ class AdviceActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     binding = ActivityAdviceBinding.inflate(layoutInflater)
     setContentView(binding.root)
-
-    viewModel = viewModelFactory.getViewModel(this)
     viewModel.getAdvice()
 
     binding.recyclerView.layoutManager = LinearLayoutManager(this)
